@@ -1,3 +1,4 @@
+
 <div class="row">
     <div class="col">
         <input #termino type="text" (keyup)="buscar(termino.value)"
@@ -5,6 +6,6 @@
     </div>
 </div>
 
-
-<app-tarjetas [items]="artistas"></app-tarjetas>
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
   
